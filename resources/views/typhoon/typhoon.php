@@ -21,6 +21,6 @@
         </style>
     </head>
     <body class="antialiased">
-       應該要是主畫面
+        颱風列表
     </body>
 </html>

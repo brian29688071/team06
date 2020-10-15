@@ -21,6 +21,10 @@
         </style>
     </head>
     <body class="antialiased">
-       應該要是主畫面
+        edit
+    <?php
+    $id =1;
+
+    ?>
     </body>
 </html>

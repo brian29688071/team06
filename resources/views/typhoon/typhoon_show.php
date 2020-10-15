@@ -21,6 +21,8 @@
         </style>
     </head>
     <body class="antialiased">
-       應該要是主畫面
+    <h1>Hello,<?php if (!empty($id)) {
+            echo $id;
+        } ?></h1>
     </body>
 </html>

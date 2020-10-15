@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\typhoon;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::any('/', function () {
     return view('welcome');
 });
+Route::any('/typhoon',[typhoon::class,'main_view']);
+
+Route::any('/typhoon_add',[typhoon::class,'typhoon_add']);
+
+Route::any('/typhoon/{id}',[typhoon::class,'typhoon_show'])
+    ->where('id','[0-9]+')->name('{id}');
+Route::any('/typhoon/{id}/edit',[typhoon::class,'typhoon_edit'])
+    ->where('id','[0-9]+');
+
+
