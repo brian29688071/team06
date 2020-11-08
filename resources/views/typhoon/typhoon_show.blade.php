@@ -21,8 +21,6 @@
         </style>
     </head>
     <body class="antialiased">
-    <h1>Hello,<?php if (!empty($id)) {
-            echo $id;
-        } ?></h1>
+    <h1>Hello,{{$id}}</h1>
     </body>
 </html>
