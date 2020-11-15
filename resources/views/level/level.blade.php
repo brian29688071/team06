@@ -21,10 +21,25 @@
         </style>
     </head>
     <body class="antialiased">
-        edit
-    <?php
-    $id =1;
-
-    ?>
+        <table align="center"><tr><td>颱風強度</td></tr></table>
+        <table border=2 align="center">
+            <tr>
+                <th>颱風強度</th>
+                <th>描述</th>
+                <th>建立時間</th>
+                <th>編輯時間</th>
+            </tr>
+            @foreach ($levels as $level)
+            <tr>
+                <th>{{$level->id}}</th>
+                <th>{{$level->description}}</th>
+                <th>{{$level->created_at}}</th>
+                <th>{{$level->updated_at}}</th>
+                <th><input type="button" value="更改" onclick="location.href='/level/{{$level->id}}/edit'"></th>
+                <th><input type="button" value="詳情" onclick="location.href='/level/{{$level->id}}'"></th>
+            </tr>
+            @endforeach
+        </table>
+        <table align="center"><tr><td><input type="button" value="新增" onclick="location.href='level_add'"></td></tr></table>
     </body>
 </html>

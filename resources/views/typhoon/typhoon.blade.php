@@ -22,7 +22,7 @@
     </head>
     <body class="antialiased">
     <table align="center"><tr><td>颱風列表</td></tr></table>
-        <table border=2>
+        <table border=2 align="center">
             <tr>
                 <th>年份</th>
                 <th>颱風編號</th>
@@ -48,6 +48,13 @@
             </tr>
             @endforeach
         </table>
-    <table align="center"><tr><td><input type="button" value="新增" onclick="location.href='typhoon_add'"></td></tr></table>
+    <table align="center">
+        <tr>
+            <td>
+                <input type="button" value="新增" onclick="location.href='typhoon_add'">
+                <input type="button" value="強度" onclick="location.href='level'">
+            </td>
+        </tr>
+    </table>
     </body>
 </html>
