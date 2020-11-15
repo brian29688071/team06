@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Team06Typhoon extends Migration
+class CreateTeam06TyphoonsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Team06Typhoon extends Migration
      */
     public function up()
     {
-        Schema::create('team06_typhoon', function (Blueprint $table) {
+        Schema::create('team06_typhoons', function (Blueprint $table) {
             $table->integer("year");
             $table->id();
             $table->string('name');
@@ -32,6 +32,6 @@ class Team06Typhoon extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('team06_typhoon');
+        Schema::dropIfExists('team06_typhoons');
     }
 }

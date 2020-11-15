@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class typhoon extends Model
+class team06_typhoon extends Model
 {
     use HasFactory;
 }

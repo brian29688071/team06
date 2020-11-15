@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\typhoon;
+use App\Http\Controllers\TyphoonController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,13 +16,11 @@ use App\Http\Controllers\typhoon;
 Route::any('/', function () {
     return view('welcome');
 });
-Route::any('/typhoon',[typhoon::class,'main_view']);
-
-Route::any('/typhoon_add',[typhoon::class,'typhoon_add']);
-
-Route::any('/typhoon/{id}',[typhoon::class,'typhoon_show'])
-    ->where('id','[0-9]+')->name('{id}');
-Route::any('/typhoon/{id}/edit',[typhoon::class,'typhoon_edit'])
-    ->where('id','[0-9]+');
+Route::any('/typhoon',[TyphoonController::class,'main_view']);
+Route::any('/typhoon_add',[TyphoonController::class,'typhoon_add']);
+Route::any('/typhoon/{id}',[TyphoonController::class,'typhoon_show']);
+Route::any('/typhoon/{id}/edit',[TyphoonController::class,'typhoon_edit']);
+Route::any('/typhoon_edit_updating',[TyphoonController::class,'typhoon_edit_updating']);
+Route::any('/typhoon_add_updating',[TyphoonController::class,'typhoon_add_updating']);
 
 

@@ -21,6 +21,10 @@
         </style>
     </head>
     <body class="antialiased">
-        時間列表
+        edit
+    <?php
+    $id =1;
+
+    ?>
     </body>
 </html>

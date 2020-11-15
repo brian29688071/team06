@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Team06Levels extends Migration
+class CreateTeam06LevelsTable extends Migration
 {
     /**
      * Run the migrations.
