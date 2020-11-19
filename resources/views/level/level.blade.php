@@ -40,6 +40,11 @@
             </tr>
             @endforeach
         </table>
-        <table align="center"><tr><td><input type="button" value="新增" onclick="location.href='level_add'"></td></tr></table>
+        <table align="center">
+            <tr>
+                <td><input type="button" value="新增" onclick="location.href='level_add'"></td>
+                <td><input type="button" value="颱風列表" onclick="location.href='typhoon'"></td>
+            </tr>
+        </table>
     </body>
 </html>
