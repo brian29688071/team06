@@ -21,8 +21,8 @@
     </style>
 </head>
 <body class="antialiased">
-    @include('level_header')
-    @yield('level_content')
-    @include('level_footer')
+    @include('typhoon_header')
+    @yield('typhoon_content')
+    @include('typhoon_footer')
 </body>
 </html>
