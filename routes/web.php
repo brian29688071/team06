@@ -18,15 +18,20 @@ Route::any('/typhoon/{id}',[TyphoonController::class,'typhoon_show'])
     ->where('id','[0-9]+');
 Route::any('/typhoon/{id}/edit',[TyphoonController::class,'typhoon_edit'])
     ->where('id','[0-9]+');
+Route::delete('/typhoon/{id}/delete',[TyphoonController::class,'typhoon_delete'])
+    ->where('id','[0-9]+');
 Route::any('/typhoon_edit_updating',[TyphoonController::class,'typhoon_edit_updating']);
 Route::any('/typhoon_add_updating',[TyphoonController::class,'typhoon_add_updating']);
 Route::any('/level',[LevelController::class,'main_view']);
 Route::any('/level_add',[LevelController::class,'level_add']);
 Route::any('/level/{id}',[LevelController::class,'level_show'])
     ->where('id','[0-9]+');
+Route::any('/level/{id}/delete',[LevelController::class,'level_delete'])
+    ->where('id','[0-9]+');
 Route::any('/level/{id}/edit',[LevelController::class,'level_edit'])
     ->where('id','[0-9]+');
 Route::any('/level_edit_updating',[LevelController::class,'level_edit_updating']);
 Route::any('/level_add_updating',[LevelController::class,'level_add_updating']);
+
 
 

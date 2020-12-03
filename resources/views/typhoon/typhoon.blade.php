@@ -10,6 +10,7 @@
                 <th>警報發布級數</th>
                 <th>建立時間</th>
                 <th>編輯時間</th>
+                <th>動作</th>
             </tr>
             @foreach ($typhoons as $typhoon)
             <tr>
@@ -23,6 +24,14 @@
                     <th>{{$typhoon->updated_at}}</th>
                     <th><input type="button" value="更改" onclick="location.href='/typhoon/{{$typhoon->id}}/edit'"></th>
                     <th><input type="button" value="詳情" onclick="location.href='/typhoon/{{$typhoon->id}}'"></th>
+                    <th>
+                        <form action="/typhoon/{{$typhoon->id}}/delete" method="post">
+                            <input type="submit" value="刪除">
+                            @method('delete')
+                            @csrf
+                        </form>
+                    </th>
+
             </tr>
             @endforeach
         </table>
@@ -31,6 +40,7 @@
             <td>
                 <input type="button" value="新增" onclick="location.href='typhoon_add'">
                 <input type="button" value="強度" onclick="location.href='level'">
+
             </td>
         </tr>
     </table>

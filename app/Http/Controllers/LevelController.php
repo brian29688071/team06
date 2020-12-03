@@ -22,7 +22,9 @@ class LevelController extends Controller
     }
     public function level_delete($id)
     {
-        return "tobe";
+        $level = team06_level::query()->findOrFail($id);
+        $level->delete();
+        return redirect('level');
     }
     public function level_show($id)
     {

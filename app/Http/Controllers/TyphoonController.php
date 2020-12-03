@@ -33,7 +33,9 @@ class TyphoonController extends Controller
     }
     public function typhoon_delete($id)
     {
-        return "tobe";
+        $typhoon = team06_typhoon::query()->findOrFail($id);
+        $typhoon->delete();
+        return redirect('typhoon');
     }
     public function typhoon_show($id)
     {

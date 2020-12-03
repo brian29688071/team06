@@ -15,6 +15,13 @@
                 <th>{{$level->updated_at}}</th>
                 <th><input type="button" value="更改" onclick="location.href='/level/{{$level->id}}/edit'"></th>
                 <th><input type="button" value="詳情" onclick="location.href='/level/{{$level->id}}'"></th>
+                <th>
+                    <form action="/level/{{$level->id}}/delete" method="post">
+                        <input type="submit" value="刪除">
+                        @method('delete')
+                        @csrf
+                    </form>
+                </th>
             </tr>
             @endforeach
         </table>

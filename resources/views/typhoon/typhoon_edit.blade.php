@@ -1,7 +1,7 @@
 @extends('typhoon_app')
 @section('typhoon_content')
     <form action="/typhoon_edit_updating" method="post">
-        {{ csrf_field() }}
+        @csrf
         <table align="center"><tr><td>編輯</td></tr></table>
         <table align="center"><tr></tr></table>
         <table table style="border:3px #FFD382 dashed;" cellpadding="10" border='1' align="center">
